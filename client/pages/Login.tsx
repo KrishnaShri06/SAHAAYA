@@ -40,9 +40,12 @@ export default function Login() {
           {/* Header */}
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+              <a
+                href="https://chatgpt.com/s/m_68aeff82ad2c81918f7e1b737895004b"
+                className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer"
+              >
                 <Shield className="h-8 w-8 text-white" />
-              </div>
+              </a>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">
               Welcome Back
