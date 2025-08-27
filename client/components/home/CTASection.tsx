@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Heart } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Users, Heart } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -12,16 +12,16 @@ const CTASection = () => {
               Ready to Make a Difference?
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of organizations and volunteers who are making a real impact 
-              in crisis response and community support worldwide.
+              Join thousands of organizations and volunteers who are making a
+              real impact in crisis response and community support worldwide.
             </p>
           </div>
 
           <div className="space-y-8">
             {/* Main CTA Button */}
             <div>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-50 text-xl px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                 asChild
               >

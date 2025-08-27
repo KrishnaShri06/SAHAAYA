@@ -1,29 +1,33 @@
-import { AlertCircle, Building2, Briefcase, FileText } from 'lucide-react';
+import { AlertCircle, Building2, Briefcase, FileText } from "lucide-react";
 
 const features = [
   {
     icon: AlertCircle,
-    title: 'Emergency Check-in',
-    description: 'Mark yourself safe or request help during crisis situations. Quick status updates for family and authorities.',
-    color: 'bg-red-50 text-red-600 border-red-200',
+    title: "Emergency Check-in",
+    description:
+      "Mark yourself safe or request help during crisis situations. Quick status updates for family and authorities.",
+    color: "bg-red-50 text-red-600 border-red-200",
   },
   {
     icon: Building2,
-    title: 'NGO Coordination',
-    description: 'Aid requests and volunteer support coordination. Connect relief organizations with communities in need.',
-    color: 'bg-green-50 text-green-600 border-green-200',
+    title: "NGO Coordination",
+    description:
+      "Aid requests and volunteer support coordination. Connect relief organizations with communities in need.",
+    color: "bg-green-50 text-green-600 border-green-200",
   },
   {
     icon: Briefcase,
-    title: 'Job & Skill-Match',
-    description: 'Connect refugees and displaced persons with job opportunities and skill-based volunteering.',
-    color: 'bg-blue-50 text-blue-600 border-blue-200',
+    title: "Job & Skill-Match",
+    description:
+      "Connect refugees and displaced persons with job opportunities and skill-based volunteering.",
+    color: "bg-blue-50 text-blue-600 border-blue-200",
   },
   {
     icon: FileText,
-    title: 'Citizen Reporting',
-    description: 'Report and verify local incidents. Real-time information sharing for better crisis response.',
-    color: 'bg-purple-50 text-purple-600 border-purple-200',
+    title: "Citizen Reporting",
+    description:
+      "Report and verify local incidents. Real-time information sharing for better crisis response.",
+    color: "bg-purple-50 text-purple-600 border-purple-200",
   },
 ];
 
@@ -36,7 +40,8 @@ const FeaturesSection = () => {
             Essential Crisis Response Tools
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive platform designed to support communities, organizations, and individuals during emergency situations
+            Comprehensive platform designed to support communities,
+            organizations, and individuals during emergency situations
           </p>
         </div>
 

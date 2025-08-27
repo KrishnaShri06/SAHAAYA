@@ -1,8 +1,14 @@
-import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Construction, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Construction, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface PlaceholderPageProps {
   title: string;
@@ -10,10 +16,10 @@ interface PlaceholderPageProps {
   comingSoonMessage?: string;
 }
 
-export default function PlaceholderPage({ 
-  title, 
-  description, 
-  comingSoonMessage = "This feature is currently under development and will be available soon." 
+export default function PlaceholderPage({
+  title,
+  description,
+  comingSoonMessage = "This feature is currently under development and will be available soon.",
 }: PlaceholderPageProps) {
   return (
     <Layout>
@@ -30,9 +36,7 @@ export default function PlaceholderPage({
               <CardDescription>{description}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-sm text-gray-600">
-                {comingSoonMessage}
-              </p>
+              <p className="text-sm text-gray-600">{comingSoonMessage}</p>
               <div className="space-y-3">
                 <Button className="w-full" asChild>
                   <Link to="/">
@@ -41,7 +45,8 @@ export default function PlaceholderPage({
                   </Link>
                 </Button>
                 <p className="text-xs text-gray-500">
-                  Continue prompting to have this page implemented with full functionality
+                  Continue prompting to have this page implemented with full
+                  functionality
                 </p>
               </div>
             </CardContent>

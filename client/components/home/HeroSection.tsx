@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -11,16 +11,15 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Unified{' '}
-                <span className="text-blue-600">War Crisis</span>{' '}
+                Unified <span className="text-blue-600">War Crisis</span>{" "}
                 Platform
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Connecting citizens, NGOs, and volunteers in times of crisis. 
+                Connecting citizens, NGOs, and volunteers in times of crisis.
                 Fast, reliable communication tools when it matters most.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-lg px-8 py-4" asChild>
                 <Link to="/signup">
@@ -28,10 +27,13 @@ const HeroSection = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4" asChild>
-                <Link to="/about">
-                  Learn More
-                </Link>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-lg px-8 py-4"
+                asChild
+              >
+                <Link to="/about">Learn More</Link>
               </Button>
             </div>
 
@@ -46,7 +48,8 @@ const HeroSection = () => {
                 <span className="text-sm text-gray-600">Secure & Verified</span>
               </div>
               <div className="text-sm text-gray-600">
-                Trusted by <span className="font-semibold">1000+</span> organizations
+                Trusted by <span className="font-semibold">1000+</span>{" "}
+                organizations
               </div>
             </div>
           </div>
@@ -64,11 +67,15 @@ const HeroSection = () => {
                       className="h-16 w-16"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-2">Crisis Response</h3>
-                  <p className="text-blue-700">Real-time coordination platform</p>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                    Crisis Response
+                  </h3>
+                  <p className="text-blue-700">
+                    Real-time coordination platform
+                  </p>
                 </div>
               </div>
-              
+
               {/* Decorative elements */}
               <div className="absolute top-4 right-4 w-20 h-20 bg-blue-200 rounded-full opacity-50"></div>
               <div className="absolute bottom-8 left-8 w-16 h-16 bg-blue-300 rounded-full opacity-40"></div>

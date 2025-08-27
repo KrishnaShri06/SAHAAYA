@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Emergency Check-in', href: '/emergency' },
-    { name: 'NGO Coordination', href: '/ngo' },
-    { name: 'Jobs', href: '/jobs' },
-    { name: 'Reports', href: '/reports' },
+    { name: "Home", href: "/" },
+    { name: "Emergency Check-in", href: "/emergency" },
+    { name: "NGO Coordination", href: "/ngo" },
+    { name: "Jobs", href: "/jobs" },
+    { name: "Reports", href: "/reports" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -30,7 +30,12 @@ const Navbar = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <p className="font-bold text-xl text-gray-900 ml-3 max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
+            <p
+              className="font-bold text-xl text-gray-900 ml-3 max-w-[550px]"
+              style={{ textIndent: "1em" }}
+            >
+              Sahaaya
+            </p>
           </Link>
 
           {/* Desktop Navigation */}
@@ -40,7 +45,7 @@ const Navbar = () => {
                 key={item.name}
                 to={item.href}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 ${
-                  isActive(item.href) ? 'text-blue-600' : 'text-gray-700'
+                  isActive(item.href) ? "text-blue-600" : "text-gray-700"
                 }`}
               >
                 {item.name}
@@ -49,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center" style={{gap: '10px'}}>
+          <div className="hidden md:flex items-center" style={{ gap: "10px" }}>
             <Button variant="outline" asChild>
               <Link to="/login">Login</Link>
             </Button>
@@ -65,7 +70,11 @@ const Navbar = () => {
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -81,7 +90,9 @@ const Navbar = () => {
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-3 py-2 text-base font-medium transition-colors hover:text-blue-600 hover:bg-blue-50 rounded-md ${
-                  isActive(item.href) ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
+                  isActive(item.href)
+                    ? "text-blue-600 bg-blue-50"
+                    : "text-gray-700"
                 }`}
               >
                 {item.name}
@@ -89,10 +100,14 @@ const Navbar = () => {
             ))}
             <div className="flex flex-col space-y-2 px-3 pt-4">
               <Button variant="outline" className="w-full" asChild>
-                <Link to="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
+                <Link to="/login" onClick={() => setIsMenuOpen(false)}>
+                  Login
+                </Link>
               </Button>
               <Button className="w-full" asChild>
-                <Link to="/signup" onClick={() => setIsMenuOpen(false)}>Sign Up</Link>
+                <Link to="/signup" onClick={() => setIsMenuOpen(false)}>
+                  Sign Up
+                </Link>
               </Button>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Github } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Twitter, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -15,8 +15,9 @@ const Footer = () => {
               <span className="font-bold text-xl text-gray-900">Sahaaya</span>
             </Link>
             <p className="text-gray-600 text-sm max-w-md">
-              Connecting citizens, NGOs, and volunteers in times of crisis. 
-              Supporting communities with fast, reliable, and simple communication tools.
+              Connecting citizens, NGOs, and volunteers in times of crisis.
+              Supporting communities with fast, reliable, and simple
+              communication tools.
             </p>
           </div>
 
@@ -25,22 +26,34 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/about"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/privacy"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link
+                  to="/terms"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   Terms
                 </Link>
               </li>
@@ -51,22 +64,22 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-blue-600 transition-colors"
                 aria-label="GitHub"
               >

@@ -1,35 +1,41 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Lock, AlertCircle } from 'lucide-react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Mail, Lock, AlertCircle } from "lucide-react";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
       // Handle login logic here
-      console.log('Login attempt:', formData);
+      console.log("Login attempt:", formData);
     }, 2000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -51,9 +57,7 @@ export default function Login() {
                 />
               </a>
             </div>
-            <h2 className="text-3xl font-bold text-gray-900">
-              Welcome
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900">Welcome</h2>
             <p className="mt-2 text-sm text-gray-600">
               Sign in to access your Sahaaya account
             </p>
@@ -132,17 +136,13 @@ export default function Login() {
                   </div>
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full"
-                  disabled={isLoading}
-                >
-                  {isLoading ? 'Signing in...' : 'Sign In'}
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Signing in..." : "Sign In"}
                 </Button>
 
                 <div className="text-center">
                   <span className="text-sm text-gray-600">
-                    Don't have an account?{' '}
+                    Don't have an account?{" "}
                     <Link
                       to="/signup"
                       className="font-medium text-blue-600 hover:text-blue-500"
@@ -163,9 +163,14 @@ export default function Login() {
                 <span className="text-sm font-medium">Emergency Access</span>
               </div>
               <p className="text-sm text-red-700 mt-2">
-                In case of emergency, you can access basic crisis information without logging in.
+                In case of emergency, you can access basic crisis information
+                without logging in.
               </p>
-              <Button variant="outline" size="sm" className="mt-3 border-red-300 text-red-700 hover:bg-red-100">
+              <Button
+                variant="outline"
+                size="sm"
+                className="mt-3 border-red-300 text-red-700 hover:bg-red-100"
+              >
                 Emergency Portal
               </Button>
             </CardContent>

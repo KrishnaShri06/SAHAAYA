@@ -1,4 +1,4 @@
-import { Users, Globe, Clock } from 'lucide-react';
+import { Users, Globe, Clock } from "lucide-react";
 
 // Custom component for Sahaaya logo
 const SahaayaIcon = ({ className }: { className?: string }) => (
@@ -12,23 +12,23 @@ const SahaayaIcon = ({ className }: { className?: string }) => (
 const stats = [
   {
     icon: Users,
-    number: '1000+',
-    label: 'Organizations Connected',
+    number: "1000+",
+    label: "Organizations Connected",
   },
   {
     icon: Globe,
-    number: '50+',
-    label: 'Countries Served',
+    number: "50+",
+    label: "Countries Served",
   },
   {
     icon: Clock,
-    number: '24/7',
-    label: 'Emergency Response',
+    number: "24/7",
+    label: "Emergency Response",
   },
   {
     icon: SahaayaIcon,
-    number: '99.9%',
-    label: 'Uptime Guarantee',
+    number: "99.9%",
+    label: "Uptime Guarantee",
   },
 ];
 
@@ -44,13 +44,15 @@ const AboutSection = () => {
                 Why This Platform?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We aim to support citizens and NGOs during crises with fast, reliable, and simple communication tools. 
-                Our platform bridges the gap between those who need help and those who can provide it, ensuring no one 
-                is left behind during critical moments.
+                We aim to support citizens and NGOs during crises with fast,
+                reliable, and simple communication tools. Our platform bridges
+                the gap between those who need help and those who can provide
+                it, ensuring no one is left behind during critical moments.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Built with security, scalability, and simplicity in mind, our platform enables real-time coordination 
-                between emergency responders, relief organizations, and affected communities.
+                Built with security, scalability, and simplicity in mind, our
+                platform enables real-time coordination between emergency
+                responders, relief organizations, and affected communities.
               </p>
             </div>
 
@@ -58,15 +60,21 @@ const AboutSection = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">Real-time crisis communication and coordination</p>
+                <p className="text-gray-700">
+                  Real-time crisis communication and coordination
+                </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">Connecting communities with relief organizations</p>
+                <p className="text-gray-700">
+                  Connecting communities with relief organizations
+                </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">Supporting displaced individuals with opportunities</p>
+                <p className="text-gray-700">
+                  Supporting displaced individuals with opportunities
+                </p>
               </div>
             </div>
           </div>
@@ -85,9 +93,7 @@ const AboutSection = () => {
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 text-sm">
-                    {stat.label}
-                  </div>
+                  <div className="text-gray-600 text-sm">{stat.label}</div>
                 </div>
               );
             })}

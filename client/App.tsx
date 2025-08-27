@@ -24,96 +24,96 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          
+
           {/* Placeholder routes for navigation items */}
-          <Route 
-            path="/emergency" 
+          <Route
+            path="/emergency"
             element={
-              <PlaceholderPage 
-                title="Emergency Check-in" 
+              <PlaceholderPage
+                title="Emergency Check-in"
                 description="Mark yourself safe or request help during crisis situations"
                 comingSoonMessage="The emergency check-in system is being developed to provide real-time safety status updates and emergency assistance requests."
               />
-            } 
+            }
           />
-          <Route 
-            path="/ngo" 
+          <Route
+            path="/ngo"
             element={
-              <PlaceholderPage 
-                title="NGO Coordination" 
+              <PlaceholderPage
+                title="NGO Coordination"
                 description="Aid requests and volunteer support coordination"
                 comingSoonMessage="The NGO coordination portal will connect relief organizations with communities in need, facilitating efficient aid distribution."
               />
-            } 
+            }
           />
-          <Route 
-            path="/jobs" 
+          <Route
+            path="/jobs"
             element={
-              <PlaceholderPage 
-                title="Job & Skill-Match" 
+              <PlaceholderPage
+                title="Job & Skill-Match"
                 description="Connect refugees and displaced persons with opportunities"
                 comingSoonMessage="The job matching platform will help displaced individuals find employment opportunities and skill-based volunteering."
               />
-            } 
+            }
           />
-          <Route 
-            path="/reports" 
+          <Route
+            path="/reports"
             element={
-              <PlaceholderPage 
-                title="Citizen Reporting" 
+              <PlaceholderPage
+                title="Citizen Reporting"
                 description="Report and verify local incidents"
                 comingSoonMessage="The citizen reporting system will enable real-time incident reporting and verification for better crisis response."
               />
-            } 
+            }
           />
-          
+
           {/* Placeholder routes for footer links */}
-          <Route 
-            path="/about" 
+          <Route
+            path="/about"
             element={
-              <PlaceholderPage 
-                title="About Us" 
+              <PlaceholderPage
+                title="About Us"
                 description="Learn more about the War Crisis Platform"
               />
-            } 
+            }
           />
-          <Route 
-            path="/contact" 
+          <Route
+            path="/contact"
             element={
-              <PlaceholderPage 
-                title="Contact Us" 
+              <PlaceholderPage
+                title="Contact Us"
                 description="Get in touch with our team"
               />
-            } 
+            }
           />
-          <Route 
-            path="/privacy" 
+          <Route
+            path="/privacy"
             element={
-              <PlaceholderPage 
-                title="Privacy Policy" 
+              <PlaceholderPage
+                title="Privacy Policy"
                 description="How we protect your data"
               />
-            } 
+            }
           />
-          <Route 
-            path="/terms" 
+          <Route
+            path="/terms"
             element={
-              <PlaceholderPage 
-                title="Terms of Service" 
+              <PlaceholderPage
+                title="Terms of Service"
                 description="Terms and conditions for using our platform"
               />
-            } 
+            }
           />
-          <Route 
-            path="/forgot-password" 
+          <Route
+            path="/forgot-password"
             element={
-              <PlaceholderPage 
-                title="Reset Password" 
+              <PlaceholderPage
+                title="Reset Password"
                 description="Recover your account access"
               />
-            } 
+            }
           />
-          
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

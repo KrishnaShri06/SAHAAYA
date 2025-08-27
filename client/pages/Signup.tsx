@@ -1,22 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Lock, User, Building, Phone } from 'lucide-react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Mail, Lock, User, Building, Phone } from "lucide-react";
 
 export default function Signup() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    organization: '',
-    password: '',
-    confirmPassword: '',
-    userType: 'individual', // individual, organization, volunteer
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    organization: "",
+    password: "",
+    confirmPassword: "",
+    userType: "individual", // individual, organization, volunteer
     agreeToTerms: false,
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -24,33 +30,36 @@ export default function Signup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     // Basic validation
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
+      alert("Passwords do not match");
       setIsLoading(false);
       return;
     }
 
     if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions');
+      alert("Please agree to the terms and conditions");
       setIsLoading(false);
       return;
     }
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
       // Handle signup logic here
-      console.log('Signup attempt:', formData);
+      console.log("Signup attempt:", formData);
     }, 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value, type } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+      [name]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
     }));
   };
 
@@ -80,7 +89,9 @@ export default function Signup() {
           {/* Signup Form */}
           <Card className="shadow-xl">
             <CardHeader className="space-y-1">
-              <CardTitle className="text-2xl text-center">Create Account</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Create Account
+              </CardTitle>
               <CardDescription className="text-center">
                 Fill in your information to get started
               </CardDescription>
@@ -174,7 +185,8 @@ export default function Signup() {
                   </div>
                 </div>
 
-                {(formData.userType === 'organization' || formData.userType === 'volunteer') && (
+                {(formData.userType === "organization" ||
+                  formData.userType === "volunteer") && (
                   <div>
                     <Label htmlFor="organization">Organization Name</Label>
                     <div className="relative mt-1">
@@ -243,28 +255,30 @@ export default function Signup() {
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
                   <Label htmlFor="agreeToTerms" className="ml-2 block text-sm">
-                    I agree to the{' '}
-                    <Link to="/terms" className="text-blue-600 hover:text-blue-500">
+                    I agree to the{" "}
+                    <Link
+                      to="/terms"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
                       Terms of Service
-                    </Link>{' '}
-                    and{' '}
-                    <Link to="/privacy" className="text-blue-600 hover:text-blue-500">
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      to="/privacy"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
                       Privacy Policy
                     </Link>
                   </Label>
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full"
-                  disabled={isLoading}
-                >
-                  {isLoading ? 'Creating Account...' : 'Create Account'}
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? "Creating Account..." : "Create Account"}
                 </Button>
 
                 <div className="text-center">
                   <span className="text-sm text-gray-600">
-                    Already have an account?{' '}
+                    Already have an account?{" "}
                     <Link
                       to="/login"
                       className="font-medium text-blue-600 hover:text-blue-500"
