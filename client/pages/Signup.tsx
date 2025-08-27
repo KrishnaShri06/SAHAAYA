@@ -69,7 +69,7 @@ export default function Signup() {
               Join the Platform
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Create your account to access crisis response tools
+              Create your account to access Sahaaya crisis response tools
             </p>
           </div>
 
