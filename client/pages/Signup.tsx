@@ -61,8 +61,12 @@ export default function Signup() {
           {/* Header */}
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
-                <Shield className="h-8 w-8 text-white" />
+              <div className="w-24 h-24 flex items-center justify-center">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F73bb2506bf36487d8a373b8a437da7a3?format=webp&width=800"
+                  alt="Sahaaya Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">
