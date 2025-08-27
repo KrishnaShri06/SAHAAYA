@@ -23,14 +23,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 flex items-center justify-center mr-auto">
+            <div className="w-12 h-12 flex items-center justify-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F7791e6fdb8a64736b0833a5c262bd0d6?format=webp&width=800"
                 alt="Sahaaya Logo"
                 className="w-full h-full object-contain"
               />
             </div>
-            <p className="font-bold text-xl text-gray-900 mx-auto max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
+            <p className="font-bold text-xl text-gray-900 ml-3 max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
           </Link>
 
           {/* Desktop Navigation */}
