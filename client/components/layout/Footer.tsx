@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">WC</span>
               </div>
-              <span className="font-bold text-xl text-gray-900">War Crisis Platform</span>
+              <span className="font-bold text-xl text-gray-900">Sahaaya</span>
             </Link>
             <p className="text-gray-600 text-sm max-w-md">
               Connecting citizens, NGOs, and volunteers in times of crisis. 
