@@ -1,4 +1,13 @@
-import { Users, Globe, Clock, Shield } from 'lucide-react';
+import { Users, Globe, Clock } from 'lucide-react';
+
+// Custom component for Sahaaya logo
+const SahaayaIcon = ({ className }: { className?: string }) => (
+  <img
+    src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
+    alt="Sahaaya Logo"
+    className={className}
+  />
+);
 
 const stats = [
   {
@@ -17,7 +26,7 @@ const stats = [
     label: 'Emergency Response',
   },
   {
-    icon: Shield,
+    icon: SahaayaIcon,
     number: '99.9%',
     label: 'Uptime Guarantee',
   },
