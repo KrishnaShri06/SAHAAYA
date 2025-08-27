@@ -47,7 +47,7 @@ export default function Login() {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
                   alt="Sahaaya Logo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain mt-2.5"
                 />
               </a>
             </div>
