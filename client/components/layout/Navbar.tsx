@@ -23,8 +23,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-auto">
-              <p className="text-white font-bold text-sm">WC</p>
+            <div className="w-8 h-8 flex items-center justify-center mr-auto">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F3f1fe44c534f4a7f8ce5169b3d0107f8?format=webp&width=800"
+                alt="Sahaaya Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <p className="font-bold text-xl text-gray-900 mx-auto max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
           </Link>
