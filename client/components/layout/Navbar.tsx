@@ -24,9 +24,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">WC</span>
+              <p className="text-white font-bold text-sm">WC</p>
             </div>
-            <span className="font-bold text-xl text-gray-900">War Crisis Platform</span>
+            <p className="font-bold text-xl text-gray-900 ml-auto max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center" style={{gap: '10px'}}>
             <Button variant="outline" asChild>
               <Link to="/login">Login</Link>
             </Button>
