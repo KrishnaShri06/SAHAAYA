@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -38,7 +38,11 @@ const HeroSection = () => {
             {/* Trust Indicators */}
             <div className="flex items-center space-x-6 pt-4">
               <div className="flex items-center space-x-2">
-                <Shield className="h-5 w-5 text-green-600" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
+                  alt="Sahaaya Logo"
+                  className="h-5 w-5"
+                />
                 <span className="text-sm text-gray-600">Secure & Verified</span>
               </div>
               <div className="text-sm text-gray-600">
@@ -54,7 +58,11 @@ const HeroSection = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto mb-6 bg-blue-600 rounded-full flex items-center justify-center">
-                    <Shield className="h-16 w-16 text-white" />
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
+                      alt="Sahaaya Logo"
+                      className="h-16 w-16"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold text-blue-900 mb-2">Crisis Response</h3>
                   <p className="text-blue-700">Real-time coordination platform</p>
