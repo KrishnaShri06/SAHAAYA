@@ -45,7 +45,7 @@ export default function Login() {
                 className="w-24 h-24 flex items-center justify-center cursor-pointer"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F73bb2506bf36487d8a373b8a437da7a3?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
                   alt="Sahaaya Logo"
                   className="w-full h-full object-contain"
                 />
