@@ -51,7 +51,7 @@ export default function Login() {
               Welcome Back
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-              Sign in to access your War Crisis Platform account
+              Sign in to access your Sahaaya account
             </p>
           </div>
 
