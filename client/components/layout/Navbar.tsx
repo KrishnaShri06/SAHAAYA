@@ -23,10 +23,10 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-auto">
               <p className="text-white font-bold text-sm">WC</p>
             </div>
-            <p className="font-bold text-xl text-gray-900 ml-auto max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
+            <p className="font-bold text-xl text-gray-900 mx-auto max-w-[550px]" style={{textIndent: '1em'}}>Sahaaya</p>
           </Link>
 
           {/* Desktop Navigation */}
