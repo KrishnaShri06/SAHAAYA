@@ -42,13 +42,17 @@ export default function Login() {
             <div className="flex justify-center mb-6">
               <a
                 href="https://chatgpt.com/s/m_68aeff82ad2c81918f7e1b737895004b"
-                className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center cursor-pointer"
+                className="w-24 h-24 flex items-center justify-center cursor-pointer"
               >
-                <Shield className="h-8 w-8 text-white" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F73bb2506bf36487d8a373b8a437da7a3?format=webp&width=800"
+                  alt="Sahaaya Logo"
+                  className="w-full h-full object-contain"
+                />
               </a>
             </div>
             <h2 className="text-3xl font-bold text-gray-900">
-              Welcome Back
+              Welcome
             </h2>
             <p className="mt-2 text-sm text-gray-600">
               Sign in to access your Sahaaya account
