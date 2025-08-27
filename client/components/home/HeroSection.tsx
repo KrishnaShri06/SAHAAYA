@@ -56,30 +56,35 @@ const HeroSection = () => {
 
           {/* Right Content - Illustration/Image Placeholder */}
           <div className="relative">
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for illustration */}
+            <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+              {/* Background Image */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2Fe58b720072c34de0a4cb92e71d67aa04?format=webp&width=800"
+                alt="Crisis Response Scene"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/40"></div>
+
+              {/* Content overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="text-center text-white z-10">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-white/90 rounded-full flex items-center justify-center backdrop-blur-sm">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F6a393caa557c44fb8803dbfe8a08ae5d%2F01c6c08966bc44148df87743f24d3c82?format=webp&width=800"
                       alt="Sahaaya Logo"
-                      className="h-16 w-16"
+                      className="h-12 w-12"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                  <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">
                     Crisis Response
                   </h3>
-                  <p className="text-blue-700">
+                  <p className="text-white/90 drop-shadow-md">
                     Real-time coordination platform
                   </p>
                 </div>
               </div>
-
-              {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-20 h-20 bg-blue-200 rounded-full opacity-50"></div>
-              <div className="absolute bottom-8 left-8 w-16 h-16 bg-blue-300 rounded-full opacity-40"></div>
-              <div className="absolute top-1/2 left-4 w-12 h-12 bg-white rounded-full opacity-60"></div>
             </div>
           </div>
         </div>
