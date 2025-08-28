@@ -29,47 +29,11 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
-          {/* Placeholder routes for navigation items */}
-          <Route
-            path="/emergency"
-            element={
-              <PlaceholderPage
-                title="Emergency Check-in"
-                description="Mark yourself safe or request help during crisis situations"
-                comingSoonMessage="The emergency check-in system is being developed to provide real-time safety status updates and emergency assistance requests."
-              />
-            }
-          />
-          <Route
-            path="/ngo"
-            element={
-              <PlaceholderPage
-                title="NGO Coordination"
-                description="Aid requests and volunteer support coordination"
-                comingSoonMessage="The NGO coordination portal will connect relief organizations with communities in need, facilitating efficient aid distribution."
-              />
-            }
-          />
-          <Route
-            path="/jobs"
-            element={
-              <PlaceholderPage
-                title="Job & Skill-Match"
-                description="Connect refugees and displaced persons with opportunities"
-                comingSoonMessage="The job matching platform will help displaced individuals find employment opportunities and skill-based volunteering."
-              />
-            }
-          />
-          <Route
-            path="/reports"
-            element={
-              <PlaceholderPage
-                title="Citizen Reporting"
-                description="Report and verify local incidents"
-                comingSoonMessage="The citizen reporting system will enable real-time incident reporting and verification for better crisis response."
-              />
-            }
-          />
+          {/* Feature pages */}
+          <Route path="/emergency" element={<Emergency />} />
+          <Route path="/ngo" element={<NGO />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/reports" element={<Reports />} />
 
           {/* Placeholder routes for footer links */}
           <Route
