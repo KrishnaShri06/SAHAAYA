@@ -1,38 +1,55 @@
-import { useState } from 'react';
-import Layout from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Badge } from '@/components/ui/badge';
-import { FileText, MapPin, Clock, AlertTriangle, CheckCircle, Eye, MessageCircle, Share, Camera, Filter } from 'lucide-react';
+import { useState } from "react";
+import Layout from "@/components/layout/Layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import {
+  FileText,
+  MapPin,
+  Clock,
+  AlertTriangle,
+  CheckCircle,
+  Eye,
+  MessageCircle,
+  Share,
+  Camera,
+  Filter,
+} from "lucide-react";
 
 export default function Reports() {
-  const [activeTab, setActiveTab] = useState('view');
+  const [activeTab, setActiveTab] = useState("view");
   const [reportForm, setReportForm] = useState({
-    title: '',
-    category: '',
-    location: '',
-    urgency: '',
-    description: '',
-    time_occurred: '',
-    reporter_name: '',
-    reporter_contact: '',
+    title: "",
+    category: "",
+    location: "",
+    urgency: "",
+    description: "",
+    time_occurred: "",
+    reporter_name: "",
+    reporter_contact: "",
     anonymous: false,
-    verified: false
+    verified: false,
   });
 
   const [filterBy, setFilterBy] = useState({
-    category: '',
-    urgency: '',
-    status: '',
-    location: ''
+    category: "",
+    urgency: "",
+    status: "",
+    location: "",
   });
 
   const handleReportSubmission = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Report submitted:', reportForm);
+    console.log("Report submitted:", reportForm);
     // Handle report submission
   };
 
@@ -43,14 +60,15 @@ export default function Reports() {
       category: "Infrastructure",
       location: "Rajori Garden",
       urgency: "critical",
-      description: "Partial building collapse after recent earthquake. Road blocked, possible injuries.",
+      description:
+        "Partial building collapse after recent earthquake. Road blocked, possible injuries.",
       time_occurred: "2 hours ago",
       reporter: "Anonymous",
       status: "verified",
       views: 156,
       comments: 12,
       verification_score: 85,
-      images: 3
+      images: 3,
     },
     {
       id: 2,
@@ -58,14 +76,15 @@ export default function Reports() {
       category: "Aid Distribution",
       location: "Central Park Entrance",
       urgency: "medium",
-      description: "New water distribution point established. Free clean water available for affected families.",
+      description:
+        "New water distribution point established. Free clean water available for affected families.",
       time_occurred: "4 hours ago",
       reporter: "Sarah M.",
       status: "verified",
       views: 89,
       comments: 5,
       verification_score: 92,
-      images: 2
+      images: 2,
     },
     {
       id: 3,
@@ -73,14 +92,15 @@ export default function Reports() {
       category: "Transportation",
       location: "Highway 01",
       urgency: "high",
-      description: "Major flooding has made Highway 101 impassable. Emergency vehicles only.",
+      description:
+        "Major flooding has made Highway 101 impassable. Emergency vehicles only.",
       time_occurred: "6 hours ago",
       reporter: "John D.",
       status: "pending",
       views: 234,
       comments: 8,
       verification_score: 67,
-      images: 1
+      images: 1,
     },
     {
       id: 4,
@@ -88,14 +108,15 @@ export default function Reports() {
       category: "Shelter",
       location: "Community Center",
       urgency: "medium",
-      description: "Emergency shelter opened with capacity for 200 people. Hot meals and basic supplies available.",
+      description:
+        "Emergency shelter opened with capacity for 200 people. Hot meals and basic supplies available.",
       time_occurred: "1 day ago",
       reporter: "Maria L.",
       status: "verified",
       views: 312,
       comments: 18,
       verification_score: 94,
-      images: 4
+      images: 4,
     },
     {
       id: 5,
@@ -103,39 +124,45 @@ export default function Reports() {
       category: "Missing Person",
       location: "Delhi University",
       urgency: "high",
-      description: "David Chen, 34, last seen near university campus. Wearing blue jacket. Family seeking information.",
+      description:
+        "David Chen, 34, last seen near university campus. Wearing blue jacket. Family seeking information.",
       time_occurred: "12 hours ago",
       reporter: "Chen Family",
       status: "unverified",
       views: 445,
       comments: 23,
       verification_score: 45,
-      images: 1
-    }
+      images: 1,
+    },
   ];
 
   const statusColors = {
-    verified: 'bg-green-100 text-green-800 border-green-200',
-    pending: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-    unverified: 'bg-gray-100 text-gray-800 border-gray-200',
-    disputed: 'bg-red-100 text-red-800 border-red-200'
+    verified: "bg-green-100 text-green-800 border-green-200",
+    pending: "bg-yellow-100 text-yellow-800 border-yellow-200",
+    unverified: "bg-gray-100 text-gray-800 border-gray-200",
+    disputed: "bg-red-100 text-red-800 border-red-200",
   };
 
   const urgencyColors = {
-    critical: 'bg-red-100 text-red-800 border-red-200',
-    high: 'bg-orange-100 text-orange-800 border-orange-200',
-    medium: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-    low: 'bg-green-100 text-green-800 border-green-200'
+    critical: "bg-red-100 text-red-800 border-red-200",
+    high: "bg-orange-100 text-orange-800 border-orange-200",
+    medium: "bg-yellow-100 text-yellow-800 border-yellow-200",
+    low: "bg-green-100 text-green-800 border-green-200",
   };
 
-  const filteredReports = mockReports.filter(report => {
-    const matchesCategory = !filterBy.category || report.category === filterBy.category;
-    const matchesUrgency = !filterBy.urgency || report.urgency === filterBy.urgency;
+  const filteredReports = mockReports.filter((report) => {
+    const matchesCategory =
+      !filterBy.category || report.category === filterBy.category;
+    const matchesUrgency =
+      !filterBy.urgency || report.urgency === filterBy.urgency;
     const matchesStatus = !filterBy.status || report.status === filterBy.status;
-    const matchesLocation = !filterBy.location || 
+    const matchesLocation =
+      !filterBy.location ||
       report.location.toLowerCase().includes(filterBy.location.toLowerCase());
-    
-    return matchesCategory && matchesUrgency && matchesStatus && matchesLocation;
+
+    return (
+      matchesCategory && matchesUrgency && matchesStatus && matchesLocation
+    );
   });
 
   return (
@@ -149,9 +176,12 @@ export default function Reports() {
                 <FileText className="h-8 w-8 text-purple-600" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Citizen Reporting</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Citizen Reporting
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Report incidents, verify information, and stay informed about local crisis situations in real-time.
+              Report incidents, verify information, and stay informed about
+              local crisis situations in real-time.
             </p>
           </div>
 
@@ -159,31 +189,31 @@ export default function Reports() {
           <div className="flex justify-center mb-8">
             <div className="flex space-x-1 bg-white p-1 rounded-lg shadow-sm border">
               <button
-                onClick={() => setActiveTab('view')}
+                onClick={() => setActiveTab("view")}
                 className={`px-6 py-3 rounded-md font-medium transition-colors ${
-                  activeTab === 'view'
-                    ? 'bg-purple-600 text-white'
-                    : 'text-gray-600 hover:text-purple-600'
+                  activeTab === "view"
+                    ? "bg-purple-600 text-white"
+                    : "text-gray-600 hover:text-purple-600"
                 }`}
               >
                 View Reports
               </button>
               <button
-                onClick={() => setActiveTab('submit')}
+                onClick={() => setActiveTab("submit")}
                 className={`px-6 py-3 rounded-md font-medium transition-colors ${
-                  activeTab === 'submit'
-                    ? 'bg-purple-600 text-white'
-                    : 'text-gray-600 hover:text-purple-600'
+                  activeTab === "submit"
+                    ? "bg-purple-600 text-white"
+                    : "text-gray-600 hover:text-purple-600"
                 }`}
               >
                 Submit Report
               </button>
               <button
-                onClick={() => setActiveTab('map')}
+                onClick={() => setActiveTab("map")}
                 className={`px-6 py-3 rounded-md font-medium transition-colors ${
-                  activeTab === 'map'
-                    ? 'bg-purple-600 text-white'
-                    : 'text-gray-600 hover:text-purple-600'
+                  activeTab === "map"
+                    ? "bg-purple-600 text-white"
+                    : "text-gray-600 hover:text-purple-600"
                 }`}
               >
                 Incident Map
@@ -192,7 +222,7 @@ export default function Reports() {
           </div>
 
           {/* View Reports Tab */}
-          {activeTab === 'view' && (
+          {activeTab === "view" && (
             <div>
               {/* Filters */}
               <Card className="shadow-lg mb-8">
@@ -209,12 +239,19 @@ export default function Reports() {
                       <select
                         id="filter-category"
                         value={filterBy.category}
-                        onChange={(e) => setFilterBy(prev => ({ ...prev, category: e.target.value }))}
+                        onChange={(e) =>
+                          setFilterBy((prev) => ({
+                            ...prev,
+                            category: e.target.value,
+                          }))
+                        }
                         className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                       >
                         <option value="">All Categories</option>
                         <option value="Infrastructure">Infrastructure</option>
-                        <option value="Aid Distribution">Aid Distribution</option>
+                        <option value="Aid Distribution">
+                          Aid Distribution
+                        </option>
                         <option value="Transportation">Transportation</option>
                         <option value="Shelter">Shelter</option>
                         <option value="Missing Person">Missing Person</option>
@@ -228,7 +265,12 @@ export default function Reports() {
                       <select
                         id="filter-urgency"
                         value={filterBy.urgency}
-                        onChange={(e) => setFilterBy(prev => ({ ...prev, urgency: e.target.value }))}
+                        onChange={(e) =>
+                          setFilterBy((prev) => ({
+                            ...prev,
+                            urgency: e.target.value,
+                          }))
+                        }
                         className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                       >
                         <option value="">All Urgency Levels</option>
@@ -243,7 +285,12 @@ export default function Reports() {
                       <select
                         id="filter-status"
                         value={filterBy.status}
-                        onChange={(e) => setFilterBy(prev => ({ ...prev, status: e.target.value }))}
+                        onChange={(e) =>
+                          setFilterBy((prev) => ({
+                            ...prev,
+                            status: e.target.value,
+                          }))
+                        }
                         className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                       >
                         <option value="">All Statuses</option>
@@ -258,13 +305,19 @@ export default function Reports() {
                       <Input
                         id="filter-location"
                         value={filterBy.location}
-                        onChange={(e) => setFilterBy(prev => ({ ...prev, location: e.target.value }))}
+                        onChange={(e) =>
+                          setFilterBy((prev) => ({
+                            ...prev,
+                            location: e.target.value,
+                          }))
+                        }
                         placeholder="Search by location"
                       />
                     </div>
                   </div>
                   <div className="mt-4 text-sm text-gray-600">
-                    Showing {filteredReports.length} of {mockReports.length} reports
+                    Showing {filteredReports.length} of {mockReports.length}{" "}
+                    reports
                   </div>
                 </CardContent>
               </Card>
@@ -276,15 +329,36 @@ export default function Reports() {
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2">{report.title}</h3>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                            {report.title}
+                          </h3>
                           <div className="flex flex-wrap gap-2 mb-3">
-                            <Badge className={statusColors[report.status as keyof typeof statusColors]}>
-                              {report.status === 'verified' && <CheckCircle className="h-3 w-3 mr-1" />}
-                              {report.status === 'pending' && <Clock className="h-3 w-3 mr-1" />}
-                              {report.status === 'disputed' && <AlertTriangle className="h-3 w-3 mr-1" />}
-                              {report.status.charAt(0).toUpperCase() + report.status.slice(1)}
+                            <Badge
+                              className={
+                                statusColors[
+                                  report.status as keyof typeof statusColors
+                                ]
+                              }
+                            >
+                              {report.status === "verified" && (
+                                <CheckCircle className="h-3 w-3 mr-1" />
+                              )}
+                              {report.status === "pending" && (
+                                <Clock className="h-3 w-3 mr-1" />
+                              )}
+                              {report.status === "disputed" && (
+                                <AlertTriangle className="h-3 w-3 mr-1" />
+                              )}
+                              {report.status.charAt(0).toUpperCase() +
+                                report.status.slice(1)}
                             </Badge>
-                            <Badge className={urgencyColors[report.urgency as keyof typeof urgencyColors]}>
+                            <Badge
+                              className={
+                                urgencyColors[
+                                  report.urgency as keyof typeof urgencyColors
+                                ]
+                              }
+                            >
                               {report.urgency.toUpperCase()}
                             </Badge>
                             <Badge variant="outline">{report.category}</Badge>
@@ -297,11 +371,18 @@ export default function Reports() {
                           </div>
                         </div>
                         <div className="text-right ml-4">
-                          <div className="text-sm text-gray-500 mb-1">Verification Score</div>
-                          <div className={`text-lg font-bold ${
-                            report.verification_score >= 80 ? 'text-green-600' :
-                            report.verification_score >= 60 ? 'text-yellow-600' : 'text-red-600'
-                          }`}>
+                          <div className="text-sm text-gray-500 mb-1">
+                            Verification Score
+                          </div>
+                          <div
+                            className={`text-lg font-bold ${
+                              report.verification_score >= 80
+                                ? "text-green-600"
+                                : report.verification_score >= 60
+                                  ? "text-yellow-600"
+                                  : "text-red-600"
+                            }`}
+                          >
                             {report.verification_score}%
                           </div>
                         </div>
@@ -358,7 +439,7 @@ export default function Reports() {
           )}
 
           {/* Submit Report Tab */}
-          {activeTab === 'submit' && (
+          {activeTab === "submit" && (
             <div className="max-w-2xl mx-auto">
               <Card className="shadow-lg">
                 <CardHeader>
@@ -367,7 +448,8 @@ export default function Reports() {
                     Submit Incident Report
                   </CardTitle>
                   <CardDescription>
-                    Report incidents, events, or important information to help your community stay informed
+                    Report incidents, events, or important information to help
+                    your community stay informed
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -377,7 +459,12 @@ export default function Reports() {
                       <Input
                         id="report-title"
                         value={reportForm.title}
-                        onChange={(e) => setReportForm(prev => ({ ...prev, title: e.target.value }))}
+                        onChange={(e) =>
+                          setReportForm((prev) => ({
+                            ...prev,
+                            title: e.target.value,
+                          }))
+                        }
                         placeholder="Brief, clear description of the incident"
                         required
                       />
@@ -389,13 +476,22 @@ export default function Reports() {
                         <select
                           id="report-category"
                           value={reportForm.category}
-                          onChange={(e) => setReportForm(prev => ({ ...prev, category: e.target.value }))}
+                          onChange={(e) =>
+                            setReportForm((prev) => ({
+                              ...prev,
+                              category: e.target.value,
+                            }))
+                          }
                           className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                           required
                         >
                           <option value="">Select category</option>
-                          <option value="Infrastructure">Infrastructure Damage</option>
-                          <option value="Aid Distribution">Aid Distribution</option>
+                          <option value="Infrastructure">
+                            Infrastructure Damage
+                          </option>
+                          <option value="Aid Distribution">
+                            Aid Distribution
+                          </option>
                           <option value="Transportation">Transportation</option>
                           <option value="Shelter">Shelter Information</option>
                           <option value="Missing Person">Missing Person</option>
@@ -409,14 +505,25 @@ export default function Reports() {
                         <select
                           id="report-urgency"
                           value={reportForm.urgency}
-                          onChange={(e) => setReportForm(prev => ({ ...prev, urgency: e.target.value }))}
+                          onChange={(e) =>
+                            setReportForm((prev) => ({
+                              ...prev,
+                              urgency: e.target.value,
+                            }))
+                          }
                           className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                           required
                         >
                           <option value="">Select urgency</option>
-                          <option value="critical">Critical - Immediate danger</option>
-                          <option value="high">High - Urgent attention needed</option>
-                          <option value="medium">Medium - Important but not urgent</option>
+                          <option value="critical">
+                            Critical - Immediate danger
+                          </option>
+                          <option value="high">
+                            High - Urgent attention needed
+                          </option>
+                          <option value="medium">
+                            Medium - Important but not urgent
+                          </option>
                           <option value="low">Low - General information</option>
                         </select>
                       </div>
@@ -429,7 +536,12 @@ export default function Reports() {
                         <Input
                           id="report-location"
                           value={reportForm.location}
-                          onChange={(e) => setReportForm(prev => ({ ...prev, location: e.target.value }))}
+                          onChange={(e) =>
+                            setReportForm((prev) => ({
+                              ...prev,
+                              location: e.target.value,
+                            }))
+                          }
                           placeholder="Specific address, intersection, or landmark"
                           className="pl-10"
                           required
@@ -443,17 +555,29 @@ export default function Reports() {
                         id="report-time"
                         type="datetime-local"
                         value={reportForm.time_occurred}
-                        onChange={(e) => setReportForm(prev => ({ ...prev, time_occurred: e.target.value }))}
+                        onChange={(e) =>
+                          setReportForm((prev) => ({
+                            ...prev,
+                            time_occurred: e.target.value,
+                          }))
+                        }
                         required
                       />
                     </div>
 
                     <div>
-                      <Label htmlFor="report-description">Detailed Description</Label>
+                      <Label htmlFor="report-description">
+                        Detailed Description
+                      </Label>
                       <Textarea
                         id="report-description"
                         value={reportForm.description}
-                        onChange={(e) => setReportForm(prev => ({ ...prev, description: e.target.value }))}
+                        onChange={(e) =>
+                          setReportForm((prev) => ({
+                            ...prev,
+                            description: e.target.value,
+                          }))
+                        }
                         placeholder="Provide as much detail as possible. Include what you saw, heard, or experienced."
                         rows={5}
                         required
@@ -461,19 +585,24 @@ export default function Reports() {
                     </div>
 
                     <div className="border-t pt-6">
-                      <h4 className="font-medium text-gray-900 mb-4">Reporter Information (Optional)</h4>
+                      <h4 className="font-medium text-gray-900 mb-4">
+                        Reporter Information (Optional)
+                      </h4>
                       <div className="space-y-4">
                         <div className="flex items-center gap-2">
                           <input
                             id="anonymous"
                             type="checkbox"
                             checked={reportForm.anonymous}
-                            onChange={(e) => setReportForm(prev => ({ ...prev, anonymous: e.target.checked }))}
+                            onChange={(e) =>
+                              setReportForm((prev) => ({
+                                ...prev,
+                                anonymous: e.target.checked,
+                              }))
+                            }
                             className="rounded border-gray-300"
                           />
-                          <Label htmlFor="anonymous">
-                            Submit anonymously
-                          </Label>
+                          <Label htmlFor="anonymous">Submit anonymously</Label>
                         </div>
 
                         {!reportForm.anonymous && (
@@ -483,16 +612,28 @@ export default function Reports() {
                               <Input
                                 id="reporter-name"
                                 value={reportForm.reporter_name}
-                                onChange={(e) => setReportForm(prev => ({ ...prev, reporter_name: e.target.value }))}
+                                onChange={(e) =>
+                                  setReportForm((prev) => ({
+                                    ...prev,
+                                    reporter_name: e.target.value,
+                                  }))
+                                }
                                 placeholder="Optional - for verification"
                               />
                             </div>
                             <div>
-                              <Label htmlFor="reporter-contact">Contact (Phone/Email)</Label>
+                              <Label htmlFor="reporter-contact">
+                                Contact (Phone/Email)
+                              </Label>
                               <Input
                                 id="reporter-contact"
                                 value={reportForm.reporter_contact}
-                                onChange={(e) => setReportForm(prev => ({ ...prev, reporter_contact: e.target.value }))}
+                                onChange={(e) =>
+                                  setReportForm((prev) => ({
+                                    ...prev,
+                                    reporter_contact: e.target.value,
+                                  }))
+                                }
                                 placeholder="Optional - for follow-up"
                               />
                             </div>
@@ -502,12 +643,25 @@ export default function Reports() {
                     </div>
 
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <h4 className="font-medium text-blue-900 mb-2">Before Submitting:</h4>
+                      <h4 className="font-medium text-blue-900 mb-2">
+                        Before Submitting:
+                      </h4>
                       <ul className="text-sm text-blue-800 space-y-1">
-                        <li>• Ensure the information is accurate to the best of your knowledge</li>
-                        <li>• Do not share personal information of others without consent</li>
-                        <li>• For immediate emergencies, contact emergency services first</li>
-                        <li>• Your report may be verified by community members</li>
+                        <li>
+                          • Ensure the information is accurate to the best of
+                          your knowledge
+                        </li>
+                        <li>
+                          • Do not share personal information of others without
+                          consent
+                        </li>
+                        <li>
+                          • For immediate emergencies, contact emergency
+                          services first
+                        </li>
+                        <li>
+                          • Your report may be verified by community members
+                        </li>
                       </ul>
                     </div>
 
@@ -522,7 +676,7 @@ export default function Reports() {
           )}
 
           {/* Map Tab */}
-          {activeTab === 'map' && (
+          {activeTab === "map" && (
             <div>
               <Card className="shadow-lg">
                 <CardHeader>
@@ -539,10 +693,13 @@ export default function Reports() {
                   <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300">
                     <div className="text-center">
                       <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-gray-900 mb-2">Interactive Map Coming Soon</h3>
+                      <h3 className="text-lg font-medium text-gray-900 mb-2">
+                        Interactive Map Coming Soon
+                      </h3>
                       <p className="text-gray-600 max-w-sm">
-                        This area will display an interactive map showing incident locations, emergency services, 
-                        aid distribution points, and other important crisis information.
+                        This area will display an interactive map showing
+                        incident locations, emergency services, aid distribution
+                        points, and other important crisis information.
                       </p>
                     </div>
                   </div>
@@ -551,11 +708,15 @@ export default function Reports() {
                   <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Critical Incidents</span>
+                      <span className="text-sm text-gray-600">
+                        Critical Incidents
+                      </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Aid Distribution</span>
+                      <span className="text-sm text-gray-600">
+                        Aid Distribution
+                      </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-green-500 rounded-full"></div>
@@ -563,7 +724,9 @@ export default function Reports() {
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600">Road Closures</span>
+                      <span className="text-sm text-gray-600">
+                        Road Closures
+                      </span>
                     </div>
                   </div>
                 </CardContent>
