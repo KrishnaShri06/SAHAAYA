@@ -9,6 +9,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Emergency from "./pages/Emergency";
+import NGO from "./pages/NGO";
+import Jobs from "./pages/Jobs";
+import Reports from "./pages/Reports";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
