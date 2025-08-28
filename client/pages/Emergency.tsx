@@ -117,7 +117,7 @@ export default function Emergency() {
                     <span className="font-medium text-red-900">Emergency Services</span>
                     <Button size="sm" className="bg-red-600 hover:bg-red-700">
                       <Phone className="h-4 w-4 mr-1" />
-                      911
+                      <p>100</p>
                     </Button>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
@@ -279,14 +279,14 @@ export default function Emergency() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
                       <div>
-                        <p className="font-medium text-green-900">John Smith</p>
+                        <p className="font-medium text-green-900">Jay Singh</p>
                         <p className="text-sm text-green-700">Marked safe 2 hours ago</p>
                       </div>
                       <CheckCircle className="h-5 w-5 text-green-600" />
                     </div>
                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
                       <div>
-                        <p className="font-medium text-gray-900">Sarah Johnson</p>
+                        <p className="font-medium text-gray-900">Sarah Roy</p>
                         <p className="text-sm text-gray-600">No recent updates</p>
                       </div>
                       <Clock className="h-5 w-5 text-gray-400" />
